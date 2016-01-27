@@ -2,7 +2,7 @@ class CommentList extends React.Component {
   constructor(props) {
     super(props);
     this.socket = null;
-    this.state = {comments: props.comments};
+    this.state = {comments: this.props.comments};
   }
 
   render () {

@@ -17,5 +17,6 @@ When you add a comment at http://localhost:3000/comments/ it should appear http:
 
 ### TODO
 
-  * Set the comment channel in the react component.
+  * Set the comment channel in the react component. Maybe a bit like [react-socket](https://github.com/coma/react-socket)
   * Make it work on Heroku.
+  * Add comment form on homepage
