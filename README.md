@@ -18,3 +18,4 @@ When you add a comment at http://localhost:3000/comments/ it should appear http:
 ### TODO
 
   * Set the comment channel in the react component.
+  * Make it work on Heroku.
