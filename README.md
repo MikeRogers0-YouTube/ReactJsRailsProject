@@ -1,24 +1,20 @@
 ## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I messed about with getting React components updating from a socket. It's not amazing code (I followed a few different tutorials), but it works :)
 
-Things you may want to cover:
+### How it works
 
-* Ruby version
+When you add a comment at http://localhost:3000/comments/ it should appear http://localhost:3000/ for all users.
 
-* System dependencies
+### Setup
 
-* Configuration
+    brew install redis
+    ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
 
-* Database creation
+    bundle
+    rails s
 
-* Database initialization
+### TODO
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  * Set the comment channel in the react component.
