@@ -4,7 +4,7 @@ I messed about with getting React components updating from a socket. It's not am
 
 ### How it works
 
-When you add a comment at http://localhost:3000/comments/ it should appear http://localhost:3000/ for all users.
+When you add a comment at http://127.0.0.1:3000/comments/ it should appear http://127.0.0.1:3000/ for all users.
 
 ### Setup
 

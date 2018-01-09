@@ -1,8 +1,11 @@
+ruby '2.4.2'
+
 source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.0.0.beta1', '< 5.1'
+gem 'rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Uglifier as compressor for JavaScript assets
@@ -16,6 +19,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # Use Puma as the app server
 gem 'puma'
+
+# For the websocket
+gem 'redis', '~> 3.0' 
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
