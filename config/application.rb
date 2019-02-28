@@ -26,5 +26,15 @@ module ReactJsRailsProject
       g.decorator false
       g.jbuilder false
     end
+
+    config.active_job.queue_adapter = :async
+    
+    if ENV['REDIS_URL'].present?
+      config.redis = { url: ENV['REDIS_URL'], network_timeout: 5 }
+      config.cache_store = :redis_store, { url: ENV['REDIS_URL'], network_timeout: 5 }
+
+      # If we have a REDIS_URL, lets assume we want sidekiq also.
+      config.active_job.queue_adapter = :sidekiq
+    end
   end
 end
