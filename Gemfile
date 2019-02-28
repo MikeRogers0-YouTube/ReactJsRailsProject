@@ -1,4 +1,4 @@
-ruby '2.4.2'
+ruby File.read('.ruby-version').chomp
 
 source 'https://rubygems.org'
 
@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'puma'
 
 # For the websocket
-gem 'redis', '~> 3.0' 
+gem 'redis'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -30,7 +30,7 @@ gem 'redis', '~> 3.0'
 # gem 'capistrano-rails', group: :development
 
 # Use React Rails
-gem 'react-rails', '~> 1.5.0'
+gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
