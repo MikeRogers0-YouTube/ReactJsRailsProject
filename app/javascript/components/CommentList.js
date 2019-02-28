@@ -1,3 +1,7 @@
+import React from "react"
+import PropTypes from "prop-types"
+import Comment from "./Comment"
+
 class CommentList extends React.Component {
   constructor(props) {
     super(props);
@@ -6,11 +10,10 @@ class CommentList extends React.Component {
   }
 
   render () {
-    var comments = this.state.comments;
     return (
       <div>
-        <ul>
-          {comments.map(function(comment) {
+        <ul className="row">
+          {this.state.comments.map(function(comment) {
             return <Comment key={comment.id} {...comment} />
           })}
         </ul>
@@ -41,5 +44,7 @@ class CommentList extends React.Component {
 }
 
 CommentList.propTypes = {
-  comments: React.PropTypes.array
+  comments: PropTypes.array
 };
+
+export default CommentList

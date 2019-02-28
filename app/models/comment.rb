@@ -1,3 +1,4 @@
 class Comment < ApplicationRecord
-  after_commit ->{ CommentRelayJob.perform_later(self) }, on: :create
+  validates :name, presence: true
+  validates :message, presence: true
 end

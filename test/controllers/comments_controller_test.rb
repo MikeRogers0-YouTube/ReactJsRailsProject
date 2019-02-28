@@ -17,10 +17,10 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create comment" do
     assert_difference('Comment.count') do
-      post comments_url, params: { comment: { body: @comment.body, name: @comment.name } }
+      post comments_url, params: { comment: { message: @comment.message, name: @comment.name } }
     end
 
-    assert_redirected_to comment_path(Comment.last)
+    assert_redirected_to comment_url(Comment.last)
   end
 
   test "should show comment" do
@@ -34,8 +34,8 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update comment" do
-    patch comment_url(@comment), params: { comment: { body: @comment.body, name: @comment.name } }
-    assert_redirected_to comment_path(@comment)
+    patch comment_url(@comment), params: { comment: { message: @comment.message, name: @comment.name } }
+    assert_redirected_to comment_url(@comment)
   end
 
   test "should destroy comment" do
@@ -43,6 +43,6 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
       delete comment_url(@comment)
     end
 
-    assert_redirected_to comments_path
+    assert_redirected_to comments_url
   end
 end

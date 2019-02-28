@@ -1,8 +1,8 @@
-class CreateComments < ActiveRecord::Migration[5.0]
+class CreateComments < ActiveRecord::Migration[5.2]
   def change
     create_table :comments do |t|
-      t.text :body
       t.string :name
+      t.text :message
 
       t.timestamps
     end
